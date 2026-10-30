@@ -3,7 +3,7 @@ import{createRoot}from'react-dom/client';
 import{BarChart,Bar,CartesianGrid,XAxis,YAxis,Tooltip,ResponsiveContainer,Legend}from'recharts';
 import{Activity,Database,ShieldCheck,Scale,Download,RefreshCw,ArrowUpRight,Upload,Brain,Layers,AlertTriangle,Sliders,FileText}from'lucide-react';
 import './style.css';
-const API='http://127.0.0.1:8000';
+const API='https://credvion-backend.onrender.com';
 const pct=x=>x==null?'N/A':(100*x).toFixed(1)+'%';
 const num=x=>x==null?'N/A':Number(x).toLocaleString();
 async function request(path,options){let res=await fetch(API+path,options);let j=await res.json();if(!res.ok)throw Error(typeof j.detail==='string'?j.detail:JSON.stringify(j.detail));return j}
